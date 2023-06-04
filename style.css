@@ -26,10 +26,6 @@ body {
     padding: 20px;
 }
 
-.logo img {
-    width: 40px;
-}
-
 .menu {
     display: flex;
 }
