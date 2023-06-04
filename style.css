@@ -56,7 +56,15 @@ body {
     width: 100%;
 }
 
-.open-menu , .close-menu {
+.open-menu {
+    position: absolute;
+    color: var(--color1);
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+
+.close-menu {
     position: absolute;
     color: var(--color1);
     cursor: pointer;
