@@ -8,16 +8,151 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        h1{
-            color: white;
-            left: 0;
-            line-height: 200px;
-            margin-top: -50px;
-            position: absolute;
-            text-align: center;
-            top: 50%;
-            width: 100%;
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            font-family: Arial, Helvetica, sans-serif;
         }
+
+        .projects {
+            width: 100%;
+            padding: 78px 0;
+            background: rgba(0, 0, 0, 0.4);
+            margin: 25px auto 25px auto;
+        }
+
+        .explain {
+            margin-left: 20px;
+        }
+
+        .ten-grade {
+            width: 1130px;
+            max-width: 95%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .projects h1{
+            color: white;
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+
+        .projects h2 {
+            color: white;
+            font-size: 15px;
+            margin-bottom: 25px;
+            letter-spacing: 2px;
+        }
+
+
+        .projects p {
+            color: white;
+            letter-spacing: 1px;
+            line-height: 28px;
+            font-size: 18px;
+            margin-bottom: 45px;
+        }
+
+        .projects-part-two {
+            width: 100%;
+            padding: 78px 0;
+            background: rgba(0, 0, 0, 0.4);
+            margin: 25px auto 25px auto;
+        }
+
+        .projects-part-two img {
+            width: 400px;
+        }
+
+        .projects-part-three img {
+            width: 400px;
+        }
+
+        .projects-part-two h1{
+            color: white;
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+
+        .projects-part-two h2 {
+            color: white;
+            font-size: 15px;
+            margin-bottom: 25px;
+            letter-spacing: 2px;
+        }
+
+
+        .projects-part-two p {
+            color: white;
+            letter-spacing: 1px;
+            line-height: 28px;
+            font-size: 18px;
+            margin-bottom: 45px;
+        }
+
+        .projects-part-three {
+            width: 100%;
+            padding: 78px 0;
+            background: rgba(0, 0, 0, 0.4);
+            margin: 25px auto 25px auto;
+        }
+
+        .projects-part-three h1{
+            color: white;
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+
+        .projects-part-three h2 {
+            color: white;
+            font-size: 15px;
+            margin-bottom: 25px;
+            letter-spacing: 2px;
+        }
+
+
+        .projects-part-three p {
+            color: white;
+            letter-spacing: 1px;
+            line-height: 28px;
+            font-size: 18px;
+            margin-bottom: 45px;
+        }
+
+        @media screen and (max-width: 610px){
+            .projects img {
+                width: 200px;
+            }
+
+            .projects-part-two img {
+                width: 200px;
+            }
+
+            .projects-part-three img {
+                width: 200px;
+            }
+
+            .peojects .explain h1 {
+                font-size: 30px;
+            }
+
+            .projects .explain h2 {
+                font-size: 20px;
+            }
+
+            .projects .explain p {
+                font-size: 13px;
+            }
+        }
+
+
+
+
     </style>
 
 </head>
@@ -39,8 +174,47 @@
         </ul>
     </nav>
     </header>
-    <section class="introduction">
-        <h1>not done yet</h1>
-    </section>
+        <section class="projects">
+            <div class="ten-grade">
+                <img src="./assets/img/treasuremap.jpg">
+                    <div class="explain">
+                        <h1>about this minigame</h1>
+                        <h2>treasure game</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est autem magni dolorum velit illum ducimus assumenda sequi quam odit suscipit, porro unde error similique, totam cupiditate doloremque ipsum? Iure aliquid totam porro animi temporibus natus nobis est hic quo debitis?</p>
+                        <a href="treasure.html">
+                            <button>play treasure game</button>
+                        </a>
+                    </div>
+            </div>
+        </section>
+        
+        <section  class="projects-part-two">
+            <div class="ten-grade">
+                <img src="./assets/img/snakeGame.png">
+                    <div class="explain">
+                        <h1>about this minigame</h1>
+                        <h2>snake game</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est autem magni dolorum velit illum ducimus assumenda sequi quam odit suscipit, porro unde error similique, totam cupiditate doloremque ipsum? Iure aliquid totam porro animi temporibus natus nobis est hic quo debitis?</p>
+                        <a href="snake.html">
+                            <button>play snake game</button>
+                        </a>
+                    </div>
+            </div>    
+        </section>
+
+        <section  class="projects-part-three">
+            <div class="ten-grade">
+                <img src="./assets/img/meme-generator.jpg">
+                    <div class="explain">
+                        <h1>about this generator</h1>
+                        <h2>create meme instantly</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est autem magni dolorum velit illum ducimus assumenda sequi quam odit suscipit, porro unde error similique, totam cupiditate doloremque ipsum? Iure aliquid totam porro animi temporibus natus nobis est hic quo debitis?</p>
+                        <!-- <a href=""> -->
+                            <button>not available yet</button>
+                        <!-- </a> -->
+                    </div>
+            </div>    
+        </section>
+
 </body>
 </html>
