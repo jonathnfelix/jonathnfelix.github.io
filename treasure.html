@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Find The Trasure...</title>
+</head>
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: Georgia, 'Times New Roman', Times, serif;
+	}
+
+	h1 {
+		margin-top: 10px;
+		margin-bottom: 20px;
+		margin-left: 10px;
+	}
+
+	h2 {
+		margin-bottom: 15px;
+	}
+
+	body {
+		margin-left: 15px;
+	}
+
+	body .explanation {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 100vh;
+
+	}
+
+	.explanation img {
+		max-width: 250px;
+		margin-right: 15px;
+	}
+
+	.explanation {
+		margin-left: 470px;
+		margin-top: -600px;
+	}
+
+	@media screen and (max-width: 610px){
+		.explanation  {
+			margin: 0;
+			margin-top: -20vh;
+		}
+
+		.back-btn {
+			float: right;
+			margin-right: 200px;
+			margin-bottom: 10px;
+		}
+	}
+</style>
+
+<body>
+	<h1>Find The Treasure</h1>
+	<img src="./assets/img/treasuremap.jpg" style="width:400px">
+
+	<p id="message"></p>
+
+	<div class="explanation">
+		<img src="./assets/img/professor-tom.jpg">
+		<div class="textbox">
+			<h2>professor tom here to explain</h2>
+			<p>just random click the map, if you're closer to the treasure you will get warmer. Therefore, if you're far away from the treasure you'll freezing. You will receive a message when you find the treasure, have fun!</p>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+	<a href="projects.html">
+		<input type="submit" class="back-btn" value="back to project page">
+	</a>
+	
+	<script type="text/javascript">
+		
+		//console.log($('img').position().left, $('img').position().top);
+
+		let width = $('img').width();
+		let height = $('img').height();
+
+
+		function getRandomNumber(init_position, size) {
+			return Math.floor(Math.random() * size) + Math.ceil(init_position);
+		}
+
+		let target = {
+			x : getRandomNumber($('img').position().left, width),
+			y : getRandomNumber($('img').position().top, height)
+		}
+
+		function getDistance(event, target) {
+			let dx = event.pageX - target.x
+			let dy = event.pageY - target.y
+		
+			return Math.sqrt((dx*dx) + (dy*dy))
+		}
+
+		function getMessage(distance) {
+			if (distance < 20) {
+				return "you're hot"
+			} else if (distance < 40) {
+				return "you're warm"
+			} else if (distance < 80) {
+				return "you're getting warmer"
+			} else if (distance < 160) {
+				return "you're normal"
+			} else if (distance < 320) {
+				return "you're cold"
+			} else {
+				return "you're freezing"
+			}
+		}
+
+
+		$('img').click(function (event) {
+			let distance = getDistance(event, target);
+			let message = getMessage(distance);
+
+			$("#message").text(message);
+
+			if (distance < 8){
+				alert("Found the treasure")
+			}
+		})
+
+	</script>
+</body>
+</html>
