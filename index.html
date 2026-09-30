@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .introduction {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 750px;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .introduction h1 {
+            color: white;
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .introduction p {
+            color: white;
+            font-size: 16px;
+            line-height: 1.6;
+            letter-spacing: 0.5px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+    <nav>
+        <ul class='nav-bar'>
+            <li class='logo'>🌙</li>
+            <input type='checkbox' id='check' />
+            <span class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <label for="check" class="close-menu"></label>
+            </span>
+            <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+        </ul>
+    </nav>
+    </header>
+
+    <section class="introduction">
+        <h1>hello there 👋🏻</h1>
+        <p>
+            Welcome to my personal portfolio website. Here, you can explore my projects in Artificial Intelligence and Web Development, learn more about my background, you can access my cv through about page. Feel free to hit me up or just bang my line
+        </p>
+    </section>
+
+</body>
+</html>
